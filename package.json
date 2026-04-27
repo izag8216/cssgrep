@@ -1,0 +1,67 @@
+{
+  "name": "cssgrep",
+  "version": "0.1.0",
+  "description": "CSS-aware search tool: find unused selectors, extract colors, audit specificity",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "cssgrep": "bin/cssgrep.js"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --clean",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "css",
+    "cli",
+    "unused-css",
+    "color-extraction",
+    "specificity",
+    "frontend",
+    "audit"
+  ],
+  "author": "izag8216",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izag8216/cssgrep.git"
+  },
+  "bugs": {
+    "url": "https://github.com/izag8216/cssgrep/issues"
+  },
+  "homepage": "https://github.com/izag8216/cssgrep#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cli-table3": "^0.6.5",
+    "colord": "^2.9.3",
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2",
+    "postcss": "^8.4.49",
+    "postcss-safe-parser": "^7.0.1",
+    "postcss-selector-parser": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "prettier": "^3.4.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}

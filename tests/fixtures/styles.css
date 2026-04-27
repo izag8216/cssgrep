@@ -1,0 +1,27 @@
+.btn-large {
+  font-size: 20px;
+}
+
+.btn {
+  padding: 10px;
+}
+
+#header {
+  background: #333;
+}
+
+.sidebar .menu-item {
+  color: #666;
+}
+
+.hero-banner {
+  display: flex;
+}
+
+ul > li > a {
+  text-decoration: none;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+}

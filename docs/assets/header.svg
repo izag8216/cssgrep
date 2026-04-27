@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f3460"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e94560"/>
+      <stop offset="100%" stop-color="#ff6b6b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <path d="M0 40 L1280 40 M0 80 L1280 80 M0 120 L1280 120 M0 160 L1280 160 M0 200 L1280 200 M0 240 L1280 240 M0 280 L1280 280"/>
+    <path d="M40 0 L40 320 M80 0 L80 320 M120 0 L120 320 M160 0 L160 320 M200 0 L200 320 M240 0 L240 320 M280 0 L280 320 M320 0 L320 320 M360 0 L360 320 M400 0 L400 320"/>
+  </g>
+
+  <!-- Decorative selector brackets -->
+  <g fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.15" filter="url(#glow)">
+    <rect x="80" y="80" width="120" height="60" rx="4"/>
+    <rect x="1080" y="180" width="120" height="60" rx="4"/>
+    <text x="90" y="118" font-family="monospace" font-size="14" fill="#e94560" fill-opacity="0.3">.unused</text>
+    <text x="1090" y="218" font-family="monospace" font-size="14" fill="#e94560" fill-opacity="0.3">#high</text>
+  </g>
+
+  <!-- Color palette circles (decorative) -->
+  <g filter="url(#glow)">
+    <circle cx="140" cy="240" r="16" fill="#e94560" fill-opacity="0.2"/>
+    <circle cx="170" cy="240" r="12" fill="#0f3460" fill-opacity="0.4" stroke="#e94560" stroke-width="1"/>
+    <circle cx="195" cy="240" r="8" fill="#ffffff" fill-opacity="0.1"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="1140" cy="100" r="16" fill="#e94560" fill-opacity="0.2"/>
+    <circle cx="1115" cy="100" r="12" fill="#0f3460" fill-opacity="0.4" stroke="#e94560" stroke-width="1"/>
+    <circle cx="1095" cy="100" r="8" fill="#ffffff" fill-opacity="0.1"/>
+  </g>
+
+  <!-- Terminal/command line decoration -->
+  <g transform="translate(940, 60)">
+    <rect width="200" height="28" rx="4" fill="#0a0a0a" fill-opacity="0.6" stroke="#e94560" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="12" y="19" font-family="monospace" font-size="13" fill="#4ecdc4" fill-opacity="0.6">$ cssgrep unused</text>
+  </g>
+
+  <g transform="translate(940, 260)">
+    <rect width="200" height="28" rx="4" fill="#0a0a0a" fill-opacity="0.6" stroke="#e94560" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="12" y="19" font-family="monospace" font-size="13" fill="#ffe66d" fill-opacity="0.6">$ cssgrep colors</text>
+  </g>
+
+  <!-- Central title -->
+  <text x="640" y="155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="72" font-weight="800" text-anchor="middle" fill="#ffffff" letter-spacing="-1">
+    cssgrep
+  </text>
+
+  <!-- Subtitle -->
+  <text x="640" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="400" text-anchor="middle" fill="#a0a0a0" letter-spacing="2">
+    CSS-AWARE SEARCH & AUDIT TOOL
+  </text>
+
+  <!-- Tagline -->
+  <text x="640" y="235" font-family="monospace" font-size="14" text-anchor="middle" fill="#e94560" fill-opacity="0.8">
+    unused selectors  /  color extraction  /  specificity audit
+  </text>
+
+  <!-- Bottom accent line -->
+  <line x1="440" y1="265" x2="840" y2="265" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+</svg>
