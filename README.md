@@ -1,8 +1,8 @@
 # cssgrep
 
-<p align="center">
-  <img src="docs/assets/header.svg" alt="cssgrep" width="100%">
-</p>
+<div align="center">
+  <img src="docs/assets/header.svg" alt="cssgrep" width="100%" height="auto">
+</div>
 
 <p align="center">
   <a href="https://github.com/izag8216/cssgrep/actions/workflows/ci.yml">
